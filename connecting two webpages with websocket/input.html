@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+
+    <button id="blue">Blue</button>
+    <button id="red">Red</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+
+    <script>
+      $(function () {
+        var socket = io();
+        $('#blue').click(function(){
+          socket.emit('colour', 'blue');
+          return false;
+        });
+
+        $('#red').click(function(){
+          socket.emit('colour', 'red');
+          return false;
+        });
+      
+      });
+    </script>
+
+  </body>
+</html>

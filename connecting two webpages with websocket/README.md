@@ -3,3 +3,4 @@
 install node.js and then do
 
     npm install
+    node index.js
